@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link href="https://fonts.font.im/css?family=Hanalei+Fill|Indie+Flower|Montserrat|Kirang+Haerang|Poppins" rel="stylesheet">
+        <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.3.1/stitch.js"></script>
+    </head>
+    <body>
+
+<div class="navbar-fixed">
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo mySeriousFont">Knock Knock</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if(!currentUser){ %>
+              <li><a href="/login" class="mySeriousFont">Old Friend is Coming Back</a></li>
+              <li><a href="/register" class="mySeriousFont">Become Lizzy's New Friend</a></li>
+          <% } else { %>
+              <li><a href="#" class="mySeriousFont"><%= currentUser.username %> is With Lizzy</a></li>
+              <li><a href="/logout" class="mySeriousFont">Leave Lizzy</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+    <div class="container">
+
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>

@@ -1,0 +1,32 @@
+<%include ../partials/header %>
+<div class="container">
+<div class="row">
+
+
+
+<h1 style="text-align:center;" class="myFont">Plant a New Member Berry</h1>
+<div style="width:30%;margin:25px auto;" >
+
+<form action="/campgrounds" method="post">
+  <div class="form-group">
+      <input class="form-control mySeriousFont" style="font-size:20px;"
+      type="text" name="name" placeholder="What is the name of the berry?">
+  </div>
+  <div class="form-group">
+  <input class="form-control mySeriousFont" style="font-size:20px;"
+  type="text" name="image" placeholder="How does the berry look like?">
+  </div>
+  <div class="form-group">
+  <input class="form-control mySeriousFont" style="font-size:20px;"
+  type="text" name="description" placeholder="Any word to tell the berry?">
+  </div>
+  <div class="form-group">
+  <button class="btn btn-large mySeriousFont" style="margin-top:15px;width:100%;">Plant it</button>
+  </div>
+</form>
+<a href="/campgrounds">Not this one...</a>
+</div>
+
+</div>
+</div>
+<%include ../partials/footer %>

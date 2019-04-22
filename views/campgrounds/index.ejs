@@ -1,0 +1,45 @@
+<% include ../partials/header %>
+
+<div class="container">
+
+<header class="jumbotron" >
+
+
+<h1 class="myFont">Welcome To Lizzy's Secret Berry Farm</h1>
+<p class="myFont">A secret camp surrounded by member berries...</p>
+<p>
+<a class="btn btn-large mySeriousFont" href="/campgrounds/new">Plant a Member Berry</a>
+</p>
+
+</header>
+
+  <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+      <% campgrounds.forEach(function(campground){ %>
+      <div class="col-md-12 col-sm-6 touch">
+        <div class="thumbnail" style="padding:15px;">
+            <img src=" <%=campground.image %>">
+        <div class="content">
+            <div class="caption" style="padding:15%;">
+              <h4 class="mySeriousFont" style="font-size:50px;color:white;"><%= campground.name %> </h4>
+                <% if (campground.rating === 0) { %>
+                <em class="mySeriousFont" style="font-size:20px;color:white;">No reviews yet.</em>
+                <% } else { %>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star <% if (campground.rating > 1.5) { %> checked <% } %>"></span>
+                <span class="fa fa-star <% if (campground.rating > 2.5) { %> checked <% } %>"></span>
+                <span class="fa fa-star <% if (campground.rating > 3.5) { %> checked <% } %>"></span>
+                <span class="fa fa-star <% if (campground.rating > 4.5) { %> checked <% } %>"></span>
+                <% } %>
+
+
+            <p>
+            <a href="/campgrounds/<%=campground._id %>" class="btn btn-large mySeriousFont">Pick me</a></p>
+            </div>
+        </div>
+        </div>
+      </div>
+    <%});%>
+  </div>
+</div>
+
+<%include ../partials/footer %>

@@ -1,0 +1,121 @@
+a{
+    color:	#9C9C9C;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.nav-wrapper a{
+  color:#EfEfEf;
+}
+
+.nav-wrapper a:hover {
+  text-decoration: none;
+  color:white;
+}
+
+.input-field input {
+   border-bottom: 20px solid #ee6e73;
+ }
+
+.thumbnail img {
+  width:100%;
+}
+
+.thumbnail {
+  padding: 0;
+}
+
+.thumbnail .caption{
+  padding: 9px;
+}
+
+.delete-form{
+  /* float: left; */
+  display: inline-block;
+}
+
+.checked {
+    color: orange;
+}
+
+.new-review{
+  width:100%;
+}
+
+.myFont{
+  font-family: 'Indie Flower', cursive;
+      color:	#9C9C9C;
+}
+
+.mySeriousFont{
+  font-family:'Kirang Haerang', cursive;
+  font-size: 30px;
+
+}
+
+
+li .mySeriousFont {
+  font-family:'Kirang Haerang', cursive;
+  font-size:30px;
+}
+
+.myCommentFont{
+  font-family: 'Montserrat', sans-serif;
+  font-size:25px;
+}
+
+.left-padding{
+  padding-left: 50px;
+  width:30%;
+  margin:10px 10px 10px 10px ;
+}
+
+
+.btn-large {
+  background-color:#ee6e73;
+  margin-bottom: 20px;
+  fade-out:0;
+}
+
+.btn-large:hover{
+  background-color: white;
+  border-color: #ee6e73;
+  border-radius: 5px;
+  color:#ee6e73;
+}
+
+.jumbotron{
+  margin-top: 40px;
+}
+
+checked{
+  color:#ee6e73;
+}
+
+.touch{
+  overflow:hidden;
+  position:relative;
+}
+
+
+.touch:hover .content{
+  visibility:visible;
+  border:2px solid #ee6e73;
+  animation:fade-in 0.3s;
+}
+
+.touch .content{
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  font-size:40px;
+  color:white;
+  text-align:center;
+  visibility:hidden;
+  transition: 0.3s;
+  animation: fade-out 0.3s;
+}

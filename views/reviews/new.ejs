@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;font-size:40px;" class="mySeriousFont">New Review: <%= campground.name %></h1>
+          <div class="col s3">
+            <form action="/campgrounds/<%= campground._id %>/reviews" method="POST">
+                  <p>
+                    <label>
+                      <input name="review[rating]" type="radio" id="first-rate5" value="5" checked />
+                        <%- '<span><i class="small material-icons">star</i></span>'.repeat(5) %>
+                      </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="review[rating]" type="radio" id="first-rate4" value="4"/>
+                        <%- '<span><i class="small material-icons">star</i></span>'.repeat(4) %>
+                      </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="review[rating]" type="radio" id="first-rate3" value="3" />
+                        <%- '<span><i class="small material-icons">star</i></span>'.repeat(3) %>
+                      </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="review[rating]" type="radio" id="first-rate2" value="2"  />
+                        <%- '<span><i class="small material-icons">star</i></span>'.repeat(2) %>
+                      </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="review[rating]" type="radio" id="first-rate1" value="1"/>
+                        <%- '<span><i class="small material-icons">star</i></span>'.repeat(1) %>
+                      </label>
+                  </p>
+                </div>
+
+                <div class="col s9">
+
+
+                <div class="form-group">
+                    <textarea class="form-control myCommentFont" type="text" name="review[text]" placeholder="How does the berry taste?" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-large btn-block mySeriousFont">Submit a Review</button>
+                </div>
+            </form>
+            <a  href="/campgrounds/<%= campground._id %>">Doesn't taste like anything...</a>
+          </div>
+        </div>
+        </div>
+
+    </div>
+</div>
+<% include ../partials/footer %>
