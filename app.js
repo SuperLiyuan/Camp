@@ -15,7 +15,7 @@ var indexRoutes=require("./routes/index");
 var reviewRoutes=require("./routes/reviews");
 var flash=require("connect-flash");
 
-mongoose.connect("mongodb+srv://Lizzy:<password>@cluster0-aoquo.mongodb.net/test?retryWrites=true",{ useNewUrlParser: true });
+mongoose.connect("mongodb+srv://Lizzy:1985317me@cluster0-aoquo.mongodb.net/test?retryWrites=true",{ useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname +"/public"));
@@ -48,6 +48,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-app.listen(8081,function(){
+app.listen(2222,function(){
   console.log("YelpCamp has started!");
 });

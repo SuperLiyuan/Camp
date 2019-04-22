@@ -8,24 +8,21 @@ router.get("/",function(req,res){
   res.render("landing");
 });
 
-
-
 //-----------------------COMMENT ROUTES-------------------------
-
-
 
 //AUTH ROUTES
 //SHOW REGISTER form
 router.get("/register", function(req, res){
-    console.log("get req.body="+req.body);
   res.render("register");
 });
 
 //sign up logic
 router.post("/register", function(req, res){
   var newUser=new User({username:req.body.username});
+  console.log("user:"+req.body.username);
   User.register(newUser,req.body.password,function(err,user){
     if(err){
+      console.log(err);
       return res.render("register");
     }
     passport.authenticate("local")(req,res,function(){
@@ -46,7 +43,7 @@ router.post("/login",
     failureRedirect:"/login"
   }),
   function(req,res){
-      console.log("login post req.body="+req.body);
+    console.log("login");
 });
 
 //logic ROUTES
